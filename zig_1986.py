@@ -1,5 +1,6 @@
 import sys
 sys.stdin = open("input (1).txt", 'r')
+
 test = 10
 t = 0
 count =[]
