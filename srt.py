@@ -1,19 +1,15 @@
-a = 10
-b = 123456789123456789
-c = 0x0F
-print(c)
+'''input_list = ['123456789']
 
-b = 32
-b2 = bin(b)
-b8 = oct(b)
-b16 = hex(b)
-print(b2)
-print(b8)
-print(b16)
+maxN = 9
+for i in range(1):
+    for j in range(maxN):
+        for k in range(j):
+            print(input_list[i][k:maxN-j+k])
+        print('-' * 10)'''
 
-
-c = 10 + 2j
-print(c, type(c))
-print(c.real)
-print(c.imag)
-print(c.conjugate())
+a = [1, 2, 3]
+b = [4, 5]
+a.extend(b)
+a.append(b)
+a.pop(2)
+print(a)
