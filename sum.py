@@ -1,22 +1,35 @@
 import sys
 sys.stdin = open("input2.txt", "r")
 
-t = int(input())
+for _ in range(10):
+    tc = int(input())
+    input_list = [list(map(int, input().split())) for _ in range(100)]
 
-b = [] * 100
-for i in range(100):
-    b.append(list(map(int, input().split())))
+    max, row, col= 0, 0, 0
+    diagonal = 0
+    back_diagonal = 0
+    for i in range(100):
+        col = 0
+        row = 0
+        diagonal += input_list[i][99 - i]
+        back_diagonal += input_list[i][i]
+        for j in range(100):
+            col += input_list[i][j]
+            row += input_list[j][i]
 
-print(b)
+        if max <= col:
+            max = col
+        if max <= row:
+            max = row
 
 
-adx = 0
-for q in range(100):
-    ad = 0
-    for w in range(100):
-        ad += b[q][w]
-    if adx <= ad:
-        adx = ad
+    if max <= diagonal:
+        max = diagonal
+
+    if max <= back_diagonal:
+        max = back_diagonal
+    print('#{} {}'.format(tc, max))
+
 
 
 
