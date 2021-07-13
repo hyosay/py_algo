@@ -4,6 +4,7 @@ setI = setA & setB
 #교집합
 setI = setA.intersection(setB)
 print('교집한 : ',setI)
+set3 = setA.
 #합집합
 setU = setA | setB
 setU = setA.union(setB)

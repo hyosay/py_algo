@@ -1,3 +1,6 @@
-a = [[1, 2], [4, 5], [6, 4], [2, 1],[9, 6], [4, 1]]
-b = sorted(a, key=lambda x: (x[1], x[0]))
+a = [1, 2]
+b = list(a)
 print(b)
+a.append(3)
+print(b)
+print(a)

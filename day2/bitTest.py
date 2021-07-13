@@ -1,4 +1,4 @@
-a = 1 # 00000001
+'''a = 1 # 00000001
 b = 2 # 00000010
 
 print('& :',a&b)
@@ -12,4 +12,14 @@ print("ch : %c" % ch)
 ch = ch ^ key
 print("ch : %c" % ch)
 ch = ch ^ key
-print("ch : %c" % ch)
+print("ch : %c" % ch)'''
+# 0111
+# 1101
+a = 7
+b = 13
+
+print('a & b =', a & b)
+print('a | b = ',a | b)
+print('a ^ b = ', a ^ b)
+
+

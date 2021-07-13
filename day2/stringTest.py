@@ -28,7 +28,7 @@ print(strA.rstrip())
 print(strA.lstrip(),'end')
 print(strA.strip(),'end')
 '''
-'''
+
 strA = 'abcde'
 strB = "abcde"
 strC = "ab\"cd\"e"
@@ -50,4 +50,6 @@ print(numStr.find('231'))
 print('index : ',numStr.index('23'))
 print(numStr[len(numStr)-1])
 print(numStr[-1])
-'''
+
+
+print(numStr.find('123', 10))

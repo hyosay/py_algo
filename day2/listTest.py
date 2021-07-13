@@ -1,3 +1,4 @@
+'''
 listA = ['a','b','c','a','c']
 print(listA)
 listA.remove('a')
@@ -8,7 +9,7 @@ print(listA)
 listA.pop(4)
 print(listA)
 
-'''
+
 listA = [1,2,3]
 listA.insert(4,'b')
 print(listA)
@@ -84,3 +85,9 @@ print(listA)
 listA = [0 for _ in range(5)]
 print(listA)
 '''
+
+
+lia = [1, 5, 3, 2]
+lib = list(lia)
+print(id(lia))
+print(id(lib))
