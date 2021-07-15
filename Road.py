@@ -1,11 +1,11 @@
 import sys
-sys.stdin = open('day6/input.txt', 'r')
+sys.stdin = open('day8/input.txt', 'r')
 
-
-
+# dfs_func
 def dfs(x, y):
     if x <= -1 or x >= N or y <= -1 or y >= N:
         return False
+
     if graph[x][y] == 0:
         graph[x][y] = 1
         dfs(x - 1, y)
@@ -15,9 +15,9 @@ def dfs(x, y):
         return True
     return False
 
-
 T = int(input())
-for i in range(1, T + 1):
+
+for test_case in range(1, T + 1):
     N, M = map(int, input().split())
 
     graph = []
@@ -25,27 +25,29 @@ for i in range(1, T + 1):
     for i in range(N):
         graph.append(list(map(int, input().split())))
 
+    #그래프 복사
     graph2 = [h[:] for h in graph]
 
+    # 조건 입력
+    key = [list(map(int, input().split())) for _ in range(M)]
 
-
-    key = [list(map(int, input().split())) for i in range(M)]
-
+    #정답 리스트 초기화
     result = []
 
-
     for j in range(0, M):
+        # dfs_func 실행
         dfs(key[j][0] - 1, key[j][1] - 1)
 
-        if graph[key[j][2] - 1][key[j][3] - 1] == 0:
-            result.append('0')
-        else:
+        if graph[key[j][2] - 1][key[j][3] - 1]:
             result.append('1')
+        else:
+            result.append('0')
+
+        # graph 초기값으로 변환
         graph = [k[:] for k in graph2]
 
-    print('#{} {}'.format(T, ' '.join(result)))
-
-
+    #result 출력
+    print('#{} {}'.format(test_case, ' '.join(result)))
 
 """input.txt
 2

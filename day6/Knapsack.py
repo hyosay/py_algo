@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt', 'r')
+sys.stdin = open('../day8/input.txt', 'r')
 
 T, w = map(int, input().split())
 a = []
