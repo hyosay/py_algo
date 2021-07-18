@@ -13,7 +13,7 @@
 5 7 51
 '''
 import sys
-sys.stdin = open('input.txt','r')
+sys.stdin = open('input2.txt','r')
 from collections import deque
 import heapq
 INF = 987654321
@@ -40,7 +40,8 @@ def prim(start):
                 dist[i[0]] = i[1]
                 heapq.heappush(pq, (dist[i[0]], i[0]))
                 p[i[0]] = u
-    sumT = 0
+    '''sumT = 0
+    
     print('idx :\t[', end='')
     for i in range(1, V+1):
         print("%d\t" % i, end=' ')
@@ -56,11 +57,14 @@ def prim(start):
     print(']')
 
     print('dist_sum : ', sumT)
-
+'''
 for i in range(E):
     s, e, v = map(int, input().split())
     g[s].append((e, v))
     g[e].append((s, v))
+
+for i in range(len(g)):
+    print(g[i], end= ' ')
 '''
 for i in range(1, V+1):
     print(i,":",end="")

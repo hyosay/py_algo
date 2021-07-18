@@ -16,7 +16,7 @@
 6 7 8
 '''
 import sys
-sys.stdin = open('input.txt','r')
+sys.stdin = open('../input.txt', 'r')
 from collections import deque
 INF = 987654321
 V, E = map(int, input().split())

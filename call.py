@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('day8/input.txt', 'r')
+sys.stdin = open('input.txt', 'r')
 
 T = int(input())
 
